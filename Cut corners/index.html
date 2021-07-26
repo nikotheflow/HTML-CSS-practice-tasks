@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Cut corners</title>
+    <style>
+        div {
+            width: 220px;
+            height: 80px;
+            background: green;
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+            position: relative;
+            padding: 0 30px;
+            margin: 15px;
+        }
+        div::after, div:before {
+            content: '';
+            position: absolute;
+            background: green;
+            width: 5px;
+            height: 70px;
+        }
+        div::after {
+            right: -5px;
+            top: 5px;
+        }
+        div::before {
+            left: -5px;
+            top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>Содержимое</div>
+</body>
+</html>
